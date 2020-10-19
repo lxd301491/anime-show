@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画</title>
+    <link href="./css/index.css"  type="text/css" rel="stylesheet" >
+    <script src="./js/index.js" type="module"></script>
+</head>
+<body>
+    <div id="stage" class="stage">
+        <svg id="orangutan-ball" class="orangutan-ball" width=20px height=20px >
+            <circle cx="10" cy="10" r="10" fill="black" stroke="black"></circle>
+            <polygon points="10,0 20,0 20,20 10,20 10,0" stroke="white" fill="white"></polygon>
+            <circle cx="10" cy="10" r="10" fill="none" id="circle2" stroke="black"></circle>
+            <circle cx="10" cy="5" r="5" fill="white" stroke="none"></circle>
+            <circle cx="10" cy="15" r="5" fill="black" stroke="none"></circle>
+            <circle cx="10" cy="5" r="2" fill="black" stroke="black"></circle>
+            <circle cx="10" cy="15" r="2" fill="white" stroke="black"></circle>
+        </svg>
+    </div>
+    <div class="anime-controller">
+        <input class="progress" step=".001" type="range" min="0" max="100" value="0">
+    </div>
+</body>
+</html>
