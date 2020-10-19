@@ -5,20 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>动画</title>
     <link href="./css/index.css"  type="text/css" rel="stylesheet" >
+    <script src="./js/zepto.min.js"></script>
     <script src="./js/index.js" type="module"></script>
 </head>
 <body>
-    <div id="stage" class="stage">
-        <svg id="orangutan-ball" class="orangutan-ball" width=20px height=20px >
-            <circle cx="10" cy="10" r="10" fill="black" stroke="black"></circle>
-            <polygon points="10,0 20,0 20,20 10,20 10,0" stroke="white" fill="white"></polygon>
-            <circle cx="10" cy="10" r="10" fill="none" id="circle2" stroke="black"></circle>
-            <circle cx="10" cy="5" r="5" fill="white" stroke="none"></circle>
-            <circle cx="10" cy="15" r="5" fill="black" stroke="none"></circle>
-            <circle cx="10" cy="5" r="2" fill="black" stroke="black"></circle>
-            <circle cx="10" cy="15" r="2" fill="white" stroke="black"></circle>
-        </svg>
+    <div class="stage">
+        <div data-step="1">
+            <svg id="orangutan-ball" class="orangutan-ball" width=20px height=20px >
+                <circle cx="10" cy="10" r="10" fill="black" stroke="black"></circle>
+                <polygon points="10,0 20,0 20,20 10,20 10,0" stroke="white" fill="white"></polygon>
+                <circle cx="10" cy="10" r="10" fill="none" id="circle2" stroke="black"></circle>
+                <circle cx="10" cy="5" r="5" fill="white" stroke="none"></circle>
+                <circle cx="10" cy="15" r="5" fill="black" stroke="none"></circle>
+                <circle cx="10" cy="5" r="2" fill="black" stroke="black"></circle>
+                <circle cx="10" cy="15" r="2" fill="white" stroke="black"></circle>
+            </svg>
+        </div>
+        <div data-step="2" class="stage-center" style="display: none;">
+            <img id="orangutan" class="orangutan" src="./img/0.jpg" />
+            
+        </div>
+        <div data-step="3" class="stage-center" style="display: none;">
+
+        </div>
+        <div data-step="4" class="stage-center" style="display: none;">
+            <h1>
+                <span class="letter">1</span>
+                <span class="letter">0</span>
+                <span class="letter">2</span>
+                <span class="letter">4</span>
+            </h1>
+            <h2>
+                <span class="letter">1</span>
+                <span class="letter">0</span>
+                <span class="letter">2</span>
+                <span class="letter">4</span>
+                <span class="letter">1</span>
+                <span class="letter">0</span>
+                <span class="letter">2</span>
+                <span class="letter">4</span>
+            </h2>
+        </div>
     </div>
+
     <div class="anime-controller">
         <input class="progress" step=".001" type="range" min="0" max="100" value="0">
     </div>

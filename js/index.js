@@ -132,7 +132,6 @@ animation
                 easing: 'easeInCubic'
             }
         ],
-        // rotate: rotateRadius + 'turn',
         duration: scaleRadius * 2,
         easing: 'easeOutExpo',
     })
@@ -151,7 +150,6 @@ animation
                 easing: 'easeInCubic'
             }
         ],
-        // rotate: rotateRadius * 7 + 'turn',
         duration: flightRadius * 2,
         easing: 'linear',
     })
@@ -167,13 +165,33 @@ animation
             },
             {
                 value: 1,
-                duration: 10000,
+                duration: 300,
                 easing: 'spring(2, 80, 10, 0)'
             }
         ],
-        // rotate: rotateRadius + 'turn',
-        duration: scaleRadius * 4
+        duration: scaleRadius * 4,
+        complete: function(anim) {
+            $('div [data-step="1"]').hide();
+            $('div [data-step="2"]').show();
+        }
     })
 // step2
-   
+   .add({
+    targets: '#orangutan',
+    translateX: {
+        value: '-50%',
+        duration: 10
+    },
+    translateY: {
+        value: '-50%',
+        duration: 10
+    },
+    scale: {
+        value: 1,
+        duration: 200,
+        delay: 10,
+        easing: 'spring(2, 120, 10, 0)'
+    },
+    duration: 200
+   })
 
